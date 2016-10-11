@@ -20,7 +20,9 @@
         <td><%= habit.name %></td>
         <td><%= habit.frequency %></td>
         <td><%= habit.last %></td>
-        <td><%= link_to "Did it!",log_path(habit) %></td>
+        <td><%= form_tag log_path(habit) , method: :get do | form |%>
+          <%= button_tag "Did it!" %>
+        <% end %></td>
         <td><%= habit.description %></td>
         <td><%= link_to 'Show', habit %></td>
         <td><%= link_to 'Edit', edit_habit_path(habit) %></td>
