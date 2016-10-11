@@ -1,5 +1,18 @@
 class HabitsController < ApplicationController
-  before_action :set_habit, only: [:show, :edit, :update, :destroy]
+  before_action :set_habit, only: [:show, :edit, :update, :destroy, :log]
+
+  def log
+    @habit.last = Date.today
+    respond_to do |format|
+      if @habit.save
+        format.html { redirect_to habits_url, notice: "Habit #{@habit.name} was logged as done today." }
+        format.json { render :show, status: :created, location: @habit }
+      else
+        format.html { redirect_to @habit, notice: "Habit #{@habit.name} could not be logged." }
+        format.json { render json: @habit.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   # GET /habits
   # GET /habits.json
