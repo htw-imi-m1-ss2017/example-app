@@ -20,12 +20,12 @@
     <%= f.label :frequency %>
     <%= f.number_field :frequency %>
   </div>
-
+  <% unless @skip_last %>
   <div class="field">
     <%= f.label :last %>
     <%= f.date_select :last %>
   </div>
-
+  <% end %>
   <div class="field">
     <%= f.label :description %>
     <%= f.text_area :description %>

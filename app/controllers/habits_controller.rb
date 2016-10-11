@@ -14,11 +14,13 @@ class HabitsController < ApplicationController
 
   # GET /habits/new
   def new
+    @skip_last = true
     @habit = Habit.new
   end
 
   # GET /habits/1/edit
   def edit
+    @skip_last = true
   end
 
   # POST /habits
