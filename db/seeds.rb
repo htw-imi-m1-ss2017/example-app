@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Habit.delete_all
+Habit.create(name: "Learn Vocabulary", frequency: 1, description: "Study English Vocabulary with Flash Cards",last: Date.today-1)
+Habit.create(name: "Buy Milk", frequency: 3, description: "Buy fresh milk",last: Date.today-4)
+Habit.create(name: "Read the Newspaper", frequency: 31, description: "Buy fresh milk",last: Date.today)
+Habit.create(name: "Clean Bathroom", frequency: 7, description: "Clean the bathroom",last: Date.today-7)
+Habit.create(name: "Buy Bread", frequency: 7, description: "Buy fresh Bread",last: Date.today-2)
