@@ -19,7 +19,7 @@
       <tr>
         <td><%= habit.name %></td>
         <td><%= habit.frequency %></td>
-        <td><%= habit.last %></td>
+        <td><%= habit.last_log_date %></td>
         <td><%= form_tag log_path(habit) , method: :get do | form |%>
           <%= button_tag "Did it!" %>
         <% end %></td>

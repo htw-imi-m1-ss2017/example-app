@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  habit: one
+  date: 2016-10-17
+  note: MyText
+
+two:
+  habit: two
+  date: 2016-10-17
+  note: MyText
