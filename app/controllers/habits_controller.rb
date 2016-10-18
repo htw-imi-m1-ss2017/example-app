@@ -2,7 +2,7 @@ class HabitsController < ApplicationController
   before_action :set_habit, only: [:show, :edit, :update, :destroy, :log]
 
   def log
-    @habit.log_entries << LogEntry.create(date: Date.today)
+    @habit.last_log_date = Date.today
     respond_to do |format|
       if @habit.save
         format.html { redirect_to habits_url, notice: "Habit #{@habit.name} was logged as done today." }

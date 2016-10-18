@@ -6,4 +6,8 @@ class Habit < ApplicationRecord
     last_log ? last_log.date : nil
   end
 
+  def last_log_date= the_date
+    log_entries << LogEntry.create(date: the_date)
+  end
+  
 end
