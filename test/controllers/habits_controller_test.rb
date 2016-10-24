@@ -2,7 +2,7 @@ require 'test_helper'
 
 class HabitsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @habit = habits(:one)
+    @habit = habits(:walk)
   end
 
   test "should get index" do
@@ -17,7 +17,7 @@ class HabitsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create habit" do
     assert_difference('Habit.count') do
-      post habits_url, params: { habit: { description: @habit.description, frequency: @habit.frequency, last: @habit.last, name: @habit.name } }
+      post habits_url, params: { habit: { description: @habit.description, frequency: @habit.frequency,  name: @habit.name } }
     end
 
     assert_redirected_to habit_url(Habit.last)
@@ -34,7 +34,7 @@ class HabitsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update habit" do
-    patch habit_url(@habit), params: { habit: { description: @habit.description, frequency: @habit.frequency, last: @habit.last, name: @habit.name } }
+    patch habit_url(@habit), params: { habit: { description: @habit.description, frequency: @habit.frequency,  name: @habit.name } }
     assert_redirected_to habit_url(@habit)
   end
 

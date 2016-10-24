@@ -1,13 +1,22 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
+dishes:
+  name: Do the Dishes
   frequency: 1
-  last: 2016-10-11
-  description: MyText
+  description: Do the dishes in the kitchen.
 
-two:
-  name: MyString
+dog:
+  name: Walk the dog
   frequency: 1
-  last: 2016-10-11
-  description: MyText
+  description: Walk the dog.
+
+
+walk:
+  name: Go for a walk
+  frequency: 2
+  description: Go for a walk every other day.
+
+litter:
+  name: Take out the litter
+  frequency: 1
+  description: Take out the litter.

@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  habit: one
+  habit: dishes
   date: 2016-10-17
-  note: MyText
+  note: Done the dishes that day.
 
 two:
-  habit: two
+  habit: walk
   date: 2016-10-17
-  note: MyText
+  note: Went for a walk. It was nice.
