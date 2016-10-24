@@ -10,6 +10,7 @@ script:
 - bin/rails db:migrate RAILS_ENV=test
 - bundle exec rails test
 deploy:
+  condition: "$DB = postgres"
   provider: heroku
   app: mediaprogramming
   run: "rake db:migrate"
