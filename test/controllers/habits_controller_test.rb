@@ -2,7 +2,7 @@ require 'test_helper'
 
 class HabitsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @habit = habits(:dog)
+    @habit = habits(:walk)
   end
 
   test "should get index" do
@@ -38,11 +38,13 @@ class HabitsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to habit_url(@habit)
   end
 
-  test "should destroy habit" do
+  test "should destroy habit even with association" do
     assert_difference('Habit.count', -1) do
       delete habit_url(@habit)
     end
 
     assert_redirected_to habits_url
   end
+
+
 end
