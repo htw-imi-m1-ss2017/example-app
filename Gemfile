@@ -57,3 +57,7 @@ group :test do
   gem 'capybara'
   gem 'launchy'
 end
+
+# set ruby version for heroku
+
+ruby '2.3.1'
