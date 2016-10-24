@@ -2,7 +2,7 @@ require 'test_helper'
 
 class HabitsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @habit = habits(:walk)
+    @habit = habits(:dog)
   end
 
   test "should get index" do
